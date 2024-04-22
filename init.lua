@@ -541,8 +541,7 @@ require('lazy').setup {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
-        --
+        tsserver = {},
 
         denols = {},
 
@@ -729,7 +728,8 @@ require('lazy').setup {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- Load the colorscheme here
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.o.background = 'dark'
+      vim.cmd.colorscheme 'gruvbox'
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'
